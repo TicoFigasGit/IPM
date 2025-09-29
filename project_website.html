@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 text-xl">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <h1 class="text-3xl font-bold">Our Project</h1>
+      <ul class="flex space-x-10 text-2xl">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#description" class="hover:text-blue-600">Description</a></li>
+        <li><a href="#assignments" class="hover:text-blue-600">Assignments</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-blue-100 pt-28">
+    <img src="https://via.placeholder.com/600x300" alt="Project Image" class="rounded-lg shadow mb-8">
+    <h2 class="text-5xl font-bold">Welcome to Our Project</h2>
+    <p class="text-2xl mt-4 text-gray-700">Explore our work and progress below.</p>
+  </section>
+
+  <!-- Description Section -->
+  <section id="description" class="min-h-screen flex flex-col justify-center items-center bg-white px-10 py-28">
+    <h2 class="text-5xl font-bold mb-8">Project Description</h2>
+    <p class="max-w-4xl text-center text-2xl text-gray-700 leading-relaxed">
+      This project showcases the group's progress and work across different stages. Each section highlights the ideas, execution, and the results we’ve achieved. 
+      The assignments section is split into two: Individual work and Group work.
+    </p>
+  </section>
+
+  <!-- Assignments Section -->
+  <section id="assignments" class="min-h-screen bg-gray-50 px-10 py-28">
+    <h2 class="text-5xl font-bold text-center mb-16">Assignments</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto h-[500px]">
+      <!-- Individual -->
+      <a href="individual.html" class="bg-white shadow rounded-3xl p-16 text-center hover:shadow-2xl transition cursor-pointer flex flex-col justify-center items-center">
+        <h3 class="text-5xl font-semibold mb-6">Individual</h3>
+        <p class="text-2xl text-gray-600">Click here to see the 4 group elements.</p>
+      </a>
+      <!-- Group -->
+      <a href="group.html" class="bg-white shadow rounded-3xl p-16 text-center hover:shadow-2xl transition cursor-pointer flex flex-col justify-center items-center">
+        <h3 class="text-5xl font-semibold mb-6">Group</h3>
+        <p class="text-2xl text-gray-600">Click here to see the project stages.</p>
+      </a>
+    </div>
+  </section>
+</body>
+
+</html>
