@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Work | Group 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2e0e6ad5b.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 text-xl">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <h1 class="text-3xl font-bold">Group 2</h1>
+      <ul class="flex space-x-10 text-2xl">
+        <li><a href="project_website.html#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="project_website.html#description" class="hover:text-blue-600">Description</a></li>
+        <li><a href="project_website.html#assignments" class="hover:text-blue-600">Assignments</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-32 text-center bg-blue-100 pb-16">
+    <h2 class="text-5xl font-bold mb-4">Group Assignments</h2>
+    <p class="text-2xl text-gray-700">Click a stage below to preview its content.</p>
+  </section>
+
+  <!-- Stages Grid -->
+  <section class="max-w-7xl mx-auto px-8 py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+    <!-- Stage 1 -->
+    <div 
+      onclick="openPDF('files/G_02_stage1.pdf')" 
+      class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 cursor-pointer flex flex-col justify-center items-center aspect-square"
+    >
+      <i class="fas fa-file-pdf text-6xl text-red-500 mb-6"></i>
+      <h3 class="text-3xl font-semibold">Stage 1</h3>
+      <p class="text-lg text-gray-600 mt-2">Project Proposal</p>
+    </div>
+
+    <!-- Example future stages -->
+    <div class="bg-gray-200 rounded-3xl shadow-inner flex flex-col justify-center items-center aspect-square text-gray-500">
+      <i class="fas fa-lock text-6xl mb-6"></i>
+      <h3 class="text-3xl font-semibold">Stage 2</h3>
+      <p class="text-lg mt-2">Coming Soon</p>
+    </div>
+
+    <div class="bg-gray-200 rounded-3xl shadow-inner flex flex-col justify-center items-center aspect-square text-gray-500">
+      <i class="fas fa-lock text-6xl mb-6"></i>
+      <h3 class="text-3xl font-semibold">Stage 3</h3>
+      <p class="text-lg mt-2">Coming Soon</p>
+    </div>
+  </section>
+
+  <!-- PDF Preview Modal -->
+  <div id="pdfModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+    <div class="bg-white w-11/12 md:w-3/4 h-[90vh] rounded-2xl relative p-4 flex flex-col">
+      
+      <!-- Close Button -->
+      <button 
+        onclick="closePDF()" 
+        class="absolute top-4 right-6 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition"
+      >
+        Close
+      </button>
+
+      <!-- PDF Preview -->
+      <iframe id="pdfFrame" src="" class="w-full h-full rounded-xl border mt-4"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openPDF(filePath) {
+      const modal = document.getElementById('pdfModal');
+      const frame = document.getElementById('pdfFrame');
+      frame.src = filePath;
+      modal.classList.remove('hidden');
+    }
+
+    function closePDF() {
+      const modal = document.getElementById('pdfModal');
+      const frame = document.getElementById('pdfFrame');
+      frame.src = "";
+      modal.classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
